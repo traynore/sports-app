@@ -4,8 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client && npm run dev",
-    "dev": "node server.js",
+    "install": "npm install && cd client && npm install",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "azure": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client && npm start",
+    "start": "node server.js",
     "server": "nodemon server.js"
   },
   "keywords": [],
