@@ -46,6 +46,7 @@ const CoachProfileHeader = (props) => {
     }
   };
 
+  console.log(uploadedFile)
 
   return (
     <div>
