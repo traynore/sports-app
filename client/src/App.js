@@ -1,5 +1,5 @@
 //Layout
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 import jwt_decode from "jwt-decode";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
@@ -52,7 +52,7 @@ function App() {
   }
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <Switch>
         <Route path="/login" component={Login} exact />
@@ -69,7 +69,7 @@ function App() {
         <Route component={NotFound}/>
         </Switch>
         <Footer/>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   );
 }
