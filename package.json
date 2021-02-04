@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "cd client && npm install && npm run build && cd ../ && npm install && node server",
+    "azure": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client && npm run start",
+    "start": "node server.js",
     "server": "nodemon server.js"
   },
   "keywords": [],
