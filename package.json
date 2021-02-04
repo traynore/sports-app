@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "dev": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client && npm run start",
     "start": "node server.js",
-    "dev": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client && npm run dev",
     "server": "nodemon server.js"
   },
   "keywords": [],
