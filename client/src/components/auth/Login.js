@@ -43,7 +43,7 @@ const Login = props => {
           <div className="col-md-12 mt-5">
             <div className="text-center mt-5 shadow p-3">
               <h1>Login Here!</h1>
-              <h6>Welcome to CLG Cillin Chiller</h6>
+              <h6>Welcome to CLG Cillin Cheir</h6>
               <form noValidate className="registerForm" onSubmit={handleSubmit}>
                 <TextFieldGroup
                   type="text"
