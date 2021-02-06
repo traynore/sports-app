@@ -11,6 +11,8 @@ module.exports = function ValidatePlayerProfile(data) {
   data.contactNO = !isEmpty(data.contactNO) ? data.contactNO : "";
   data.mother = !isEmpty(data.mother) ? data.mother : "";
   data.father = !isEmpty(data.father) ? data.father : "";
+  data.gender = !isEmpty(data.gender) ? data.gender : "";
+  data.contactOff = !isEmpty(data.contactOff) ? data.contactOff : "";
 
   if (!Validator.isLength(data.name, { min: 3, max: 50 })) {
     errors.name = "Name must be between 3 to 50 characters";
@@ -18,6 +20,14 @@ module.exports = function ValidatePlayerProfile(data) {
 
   if (Validator.isEmpty(data.name)) {
     errors.name = "Name field must not be empty";
+  }
+
+  if (Validator.isEmpty(data.gender)) {
+    errors.gender = "Gender field must not be empty";
+  }
+
+  if (Validator.isEmpty(data.contactOff)) {
+    errors.contactOff = "Contact off field must not be empty";
   }
 
   if (Validator.isEmpty(data.dateofbirth)) {

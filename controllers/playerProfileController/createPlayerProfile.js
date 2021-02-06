@@ -16,6 +16,8 @@ exports.createPlayerProfile = async (req, res, next) => {
             name: req.body.name,
             dateofbirth: req.body.dateofbirth,
             age: req.body.age,
+            gender: req.body.gender,
+            contactOff: req.body.contactOff,
             unique_id: req.body.unique_id,
             currentGroup: req.body.currentGroup,
             imgUrl: req.body.imgUrl,

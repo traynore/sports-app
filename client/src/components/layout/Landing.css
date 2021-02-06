@@ -1,11 +1,15 @@
 .wrap {
   background-image: linear-gradient(to top, #dee1dd, #c4cdc1);
-  height: 140vh;
+  height: 180vh;
 }
 
 .landingPage {
   background-image: linear-gradient(to top, #dee1dd, #c4cdc1);
   height: 81vh;
+}
+
+select {
+  background-image: linear-gradient(to top, #dee1dd, #c4cdc1);
 }
 
 .content {
@@ -91,9 +95,12 @@ img {
 
   .wrap {
     background-image: linear-gradient(to top, #dee1dd, #c4cdc1);
-    height: 180vh;
+    height: 220vh;
   }
 
+  .landingPage {
+    height: 120vh;
+  }
   .btn-reg {
     display: block;
     width: 100%;
