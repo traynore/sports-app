@@ -18,6 +18,10 @@ const PlayerProfileSchema = new mongoose.Schema({
     required: true
   },
 
+  gender: {
+    type: String,
+  },
+
   currentGroup: {
     type: String,
     minlength: 3,
@@ -49,6 +53,10 @@ const PlayerProfileSchema = new mongoose.Schema({
     minlength: 6,
     maxlength: 30,
     required: true
+  },
+
+  contactOff: {
+    type: String
   },
 
   playerNotes: [

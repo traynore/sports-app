@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { logoutUser } from "../../actions/authActions";
+import Logo from "../assets/logo.png";
 
 //CSS
 import "./Navbar.css";
 
-const Navbar = props => {
+const Navbar = (props) => {
   const { isAuthenticated, user } = props.auth;
-  const onLogoutClick = e => {
+  const onLogoutClick = (e) => {
     e.preventDefault();
     props.logoutUser();
   };
@@ -45,7 +46,7 @@ const Navbar = props => {
           Coaches Profile
         </Link>
       </li>
-      <li className="nav-link nav-item" onClick={onLogoutClick}> 
+      <li className="nav-link nav-item" onClick={onLogoutClick}>
         logout
       </li>
     </ul>
@@ -66,9 +67,19 @@ const Navbar = props => {
         <i className="fa fa-bars fa-2x"></i>
       </div>
       <header>
+     <div className="Logo">
+     <Link className="" to="/">
+            <img
+              src={Logo}
+              style={{ width: "65px", height: "65px" }}
+              className=""
+              alt=""
+            />
+          </Link>
+     </div>
         <h1 className="logo">
-          <Link to="/" className="nav-item">
-            C.L.G Cillin Chiller
+          <Link to="/" className="nav-item brand">
+            C.L.G Cillin Cheir
           </Link>
         </h1>
         <nav>{isAuthenticated ? authLinks : guestLinks}</nav>
@@ -79,10 +90,10 @@ const Navbar = props => {
 
 Navbar.propTypes = {
   logoutUser: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired
+  auth: PropTypes.object.isRequired,
 };
 
-const mapStateToProps = state => ({
-  auth: state.auth
+const mapStateToProps = (state) => ({
+  auth: state.auth,
 });
 export default connect(mapStateToProps, { logoutUser })(Navbar);

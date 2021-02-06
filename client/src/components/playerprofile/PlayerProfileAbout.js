@@ -178,6 +178,18 @@ const PlayerProfileAbout = (props) => {
                 <h5 className="mb-3">
                   Current Group : &nbsp; &nbsp; {playerprofile.currentGroup}{" "}
                 </h5>
+                {playerprofile.gender ? (
+                   <h5 className="mb-3">
+                   Gender : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{" "}
+                   {playerprofile.gender}{" "}
+                 </h5>
+                ) : null}
+                {playerprofile.contactOff ? (
+                   <h5 className="mb-3">
+                   Contact Of : &nbsp; &nbsp; &nbsp; &nbsp;{" "}
+                   {playerprofile.contactOff}{" "}
+                 </h5>
+                ) : null}
                 <h5 className="mb-3">
                   Contact No : &nbsp; &nbsp; &nbsp; &nbsp;{" "}
                   {playerprofile.contactNO}{" "}

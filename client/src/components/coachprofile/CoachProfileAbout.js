@@ -117,18 +117,23 @@ let diff = DATE_DIFF(date,date2, "Y").outputs.years;
                     onChange={handleChange}
                   >
                     <option>Select Options from Below</option>
+                    <option value="Boys U - 6">Boys U - 6</option>
                     <option value="Boys U - 7">Boys U - 7</option>
-                    <option value="Boys U - 10">Boys U - 10</option>
+                    <option value="Boys U - 9">Boys U - 9</option>
+                    <option value="Boys U - 11">Boys U - 11</option>
                     <option value="Boys U - 13">Boys U - 13</option>
-                    <option value="Boys U - 16">Boys U - 16</option>
-                    <option value="Boys U - 19">Boys U - 19</option>
-                    <option value="Boys U - 22">Boys U - 22</option>
-                    <option value="Girls U - 7">Girls U - 7</option>
+                    <option value="Boys U - 15">Boys U - 15</option>
+                    <option value="Boys U - 17">Boys U - 17</option>
+                    <option value="Boys U - 20">Boys U - 20</option>
+                    <option value="Girls U - 6">Girls U - 6</option>
+                    <option value="Girls U - 8">Girls U - 8</option>
                     <option value="Girls U - 10">Girls U - 10</option>
-                    <option value="Girls U - 13">Girls U - 13</option>
+                    <option value="Girls U - 12">Girls U - 12</option>
+                    <option value="Girls U - 14">Girls U - 14</option>
                     <option value="Girls U - 16">Girls U - 16</option>
-                    <option value="Girls U - 19">Girls U - 19</option>
-                    <option value="Girls U - 22">Girls U - 22</option>
+                    <option value="Girls U - 18">Girls U - 18</option>
+                    <option value="Girls U - 20">Girls U - 20</option>
+
                   </select>
                   <button
                     onClick={addcurrentGroup}

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../assets/logo.png"
 //CSS
 import "./Landing.css";
 
@@ -10,7 +11,10 @@ const Landing = props => {
         <div className="row align-items-center">
           <div className="col-md-12">
             <div className="content shadow p-5">
-              <h1>Welcome to the Cillin Chiller</h1>
+              <div>
+              <img src={Logo} alt="logo" className="img-fluid" />
+              </div>
+              <h1>Welcome to our Coaching Platform</h1>
               <Link to="/playerprofiles" className="btn-reg">
                 View Player Profiles
               </Link>

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
+import {Link} from "react-router-dom"
 import PropTypes from "prop-types";
 import Spinner from "../common/Spinner";
 import { getCoachProfiles } from "../../actions/coachProfileActions";
-import CoachProfileItem from "./CoachProfileItem";
 import TextFieldGroup from "../common/TextFieldGroup"
 
 const CoachProfiles = props => {
@@ -35,9 +35,33 @@ const CoachProfiles = props => {
       );
     } else {
       if (coachProfiles.length > 0 && loading === false) {
-        profileItems = coachProfiles.map(coachprofile => (
-          <CoachProfileItem key={coachprofile._id} coachprofile={coachprofile} />
-        ));
+        // profileItems = coachProfiles.map(coachprofile => (
+        //   <CoachProfileItem key={coachprofile._id} coachprofile={coachprofile} />
+        // ));
+        profileItems = ( <div className="overflow-auto" style={{width: "100%"}}>
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Awards</th>
+              <th scope="col">Contact</th>
+              <th scope="col">Unique ID</th>
+            </tr>
+          </thead>
+          <tbody>
+            {coachProfiles.map((coachprofile, index) => {
+              return (<tr key={index}>
+                <th scope="row">{index + 1}</th>
+                <td><Link to={`/coachesprofiles/${coachprofile._id}`}>{coachprofile.name}</Link></td>
+                <td>{coachprofile.coachEducation.length}</td>
+                <td>{coachprofile.contactNO}</td>
+                <td>{coachprofile.unique_id}</td>
+              </tr>)
+            })}
+          </tbody>
+        </table>
+        </div>)
       } else {
         profileItems = <h4>No Profiles Found...</h4>;
       }
@@ -51,9 +75,33 @@ const CoachProfiles = props => {
       );
     } else {
       if (coachprofiles.length > 0 && loading === false) {
-        profileItems = coachprofiles.map(coachprofile => (
-          <CoachProfileItem key={coachprofile._id} coachprofile={coachprofile} />
-        ));
+        // profileItems = coachprofiles.map(coachprofile => (
+        //   <CoachProfileItem key={coachprofile._id} coachprofile={coachprofile} />
+        // ));
+        profileItems = ( <div className="overflow-auto" style={{width: "100%"}}>
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Awards</th>
+              <th scope="col">Contact</th>
+              <th scope="col">Unique ID</th>
+            </tr>
+          </thead>
+          <tbody>
+            {coachprofiles.map((coachprofile, index) => {
+              return (<tr key={index}>
+                <th scope="row">{index + 1}</th>
+                <td><Link to={`/coachesprofiles/${coachprofile._id}`}>{coachprofile.name}</Link></td>
+                <td>{coachprofile.coachEducation.length}</td>
+                <td>{coachprofile.contactNO}</td>
+                <td>{coachprofile.unique_id}</td>
+              </tr>)
+            })}
+          </tbody>
+        </table>
+        </div>)
       } else {
         profileItems = <h4>No Profiles Found...</h4>;
       }

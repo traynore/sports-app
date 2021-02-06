@@ -5,6 +5,7 @@ const connectDB = async () => {
     const connection = await mongoose.connect(process.env.MONGOURI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      useFindAndModify: false,
       useCreateIndex: true
     });
 

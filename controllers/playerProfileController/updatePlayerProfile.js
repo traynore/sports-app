@@ -18,8 +18,10 @@ exports.updatePlayerProfile = async (req, res, next) => {
         {
             const updatePlayerProfile = {
             name: req.body.name ? req.body.name : playerprofile.name,
+            gender: req.body.gender ? req.body.gender : playerprofile.gender,
             dateofbirth: req.body.dateofbirth ? req.body.dateofbirth : playerprofile.dateofbirth,
             age: req.body.age ? req.body.age : playerprofile.age,
+            contactOff: req.body.contactOff ? req.body.contactOff : playerprofile.contactOff,
             unique_id: req.body.unique_id ? req.body.unique_id : playerprofile.unique_id,
             currentGroup: req.body.currentGroup ? req.body.currentGroup : playerprofile.currentGroup,
             imgUrl: req.body.imgUrl ? req.body.imgUrl : playerprofile.imgUrl,
